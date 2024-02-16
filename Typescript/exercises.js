@@ -1,4 +1,13 @@
 // Exercises
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 /*Ex-1 Personal Message: Store a person’s name in a variable, and print a message to that person.
 Your message should be simple, such as, “Hello Eric, would you like to learn some Python today?”*/
 var personName = "Abdul Rehman";
@@ -97,3 +106,35 @@ for (var i = 0; i < guests.length; i++) {
 guests.pop();
 guests.pop();
 console.log("Empty list:", guests);
+/*Ex-16 Seeing the World: Think of at least five places in the world you’d like to visit.
+• Store the locations in a array. Make sure the array is not in alphabetical order.
+• Print your array in its original order.
+• Print your array in alphabetical order without modifying the actual list.
+• Show that your array is still in its original order by printing it.
+• Print your array in reverse alphabetical order without changing the order of the original list.
+• Show that your array is still in its original order by printing it again.*/
+var places = ["maldives", "dubai", "thailand", "canada"];
+for (var i = 0; i < places.length; i++) {
+    console.log(places[i]);
+}
+console.log("Sorted Array");
+var newPlaces = __spreadArray([], places, true);
+newPlaces.sort();
+newPlaces.map(function (a) { console.log(a); });
+console.log("Original array after sorting.");
+for (var i = 0; i < places.length; i++) {
+    console.log(places[i]);
+}
+console.log("Sorted Array in reversed");
+newPlaces.reverse();
+newPlaces.map(function (a) { console.log(a); });
+console.log("Original array after sorting.");
+for (var i = 0; i < places.length; i++) {
+    console.log(places[i]);
+}
+/*Ex-17 Dinner Guests: Working with one of the programs from Exercises 14 through 18, print a message indicating the number of people you are inviting to dinner. */
+console.log("Number of people invited to dinner: " + guests.length);
+/*Ex-18 Think of something you could store in a array. For example, you could make a list of mountains, rivers, countries, cities, languages,
+or anything else you’d like. Write a program that creates a list containing these items.*/
+var languages = ["english", "urdu", "hindi", "arabic", "french"];
+languages.forEach(function (a) { return console.log(a); });

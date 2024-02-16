@@ -117,8 +117,50 @@ for(let i = 0; i < guests.length; i++){
 }
 guests.pop();
 guests.pop();
-
 console.log("Empty list:", guests);
 
+/*Ex-16 Seeing the World: Think of at least five places in the world you’d like to visit.
+• Store the locations in a array. Make sure the array is not in alphabetical order.
+• Print your array in its original order.
+• Print your array in alphabetical order without modifying the actual list.
+• Show that your array is still in its original order by printing it.
+• Print your array in reverse alphabetical order without changing the order of the original list.
+• Show that your array is still in its original order by printing it again.*/
+
+let places: string[] = ["maldives", "dubai", "thailand", "canada"];
+for(let i = 0; i < places.length; i++){
+    console.log(places[i])
+}
+console.log("Sorted Array");
+let newPlaces: string[] = [...places];
+newPlaces.sort();
+newPlaces.map((a)=>{console.log(a)})
+
+console.log("Original array after sorting.");
+for(let i = 0; i < places.length; i++){
+    console.log(places[i])
+}
+
+console.log("Sorted Array in reversed");
+newPlaces.reverse();
+newPlaces.map((a)=>{console.log(a)})
+
+console.log("Original array after sorting.");
+for(let i = 0; i < places.length; i++){
+    console.log(places[i])
+}
+
+/*Ex-17 Dinner Guests: Working with one of the programs from Exercises 14 through 18, print a message indicating the number of people you are inviting to dinner. */
+console.log("Number of people invited to dinner: " + guests.length);
+
+/*Ex-18 Think of something you could store in a array. For example, you could make a list of mountains, rivers, countries, cities, languages,
+or anything else you’d like. Write a program that creates a list containing these items.*/
+let languages: string[] = ["english", "urdu", "hindi", "arabic", "french"];
+languages.forEach( a => console.log(a) );
+
+/*Ex-19 They think of something you could store in a TypeScript Object. Write a program that creates Objects containing these items. */
+let students: {name: string, fatherName: string, rollNum: number}[] = [
+    
+]
 
 
