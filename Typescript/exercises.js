@@ -138,3 +138,108 @@ console.log("Number of people invited to dinner: " + guests.length);
 or anything else you’d like. Write a program that creates a list containing these items.*/
 var languages = ["english", "urdu", "hindi", "arabic", "french"];
 languages.forEach(function (a) { return console.log(a); });
+/*Ex-19 They think of something you could store in a TypeScript Object. Write a program that creates Objects containing these items. */
+var students = [
+    {
+        name: "rehman",
+        fatherName: "waseem",
+        rollNum: 85
+    },
+    {
+        name: "ali",
+        fatherName: "huzaifa",
+        rollNum: 78
+    },
+    {
+        name: "hamza",
+        fatherName: "abbas",
+        rollNum: 14
+    }
+];
+students.forEach(function (a) { return console.log(a); });
+/*Ex-20 Intentional Error: If you haven’t received an array index error in one of your programs yet, try to make one happen.
+Change an index in one of your programs to produce an index error. Make sure you correct the error before closing the program. */
+console.log(languages[8]); //undefined
+/*Ex-21 Conditional Tests: Write a series of conditional tests. Print a statement describing each test and your prediction for the results of each test. Your code should look something like this:
+let car = 'subaru';
+console.log("Is car == 'subaru'? I predict True.")
+console.log(car == 'subaru')
+• Look closely at your results, and make sure you understand why each line evaluates to True or False.
+• Create at least 10 tests. Have at least 5 tests evaluate to True and another 5 tests evaluate to False. */
+var language = "JavaScript";
+console.log("Is language == 'JavaScript'? I predict True.");
+console.log(language == 'JavaScript'); //true
+console.log("Is language == 'python'? I predict False.");
+console.log(language == 'python'); //false
+console.log("Is language != 'C'? I predict True.");
+console.log(language != 'C'); //true
+console.log("Is language === 'javaScript'? I predict False.");
+console.log(language === 'javaScript'); //false
+console.log("Is language !== 'python'? I predict True.");
+console.log(language !== 'python'); //true
+console.log("Is language.length > 10? I predict False.");
+console.log(language.length > 10); //false
+console.log("Is language.length < 8? I predict True.");
+console.log(language.length < 8); //true
+console.log("Is language[0] == 'p'? I predict False.");
+console.log(language[0] == "p"); //false
+console.log("Is language[1] == 'a'? I predict True.");
+console.log(language[1] == "a"); //true
+console.log("Is language[0] == 'p'? I predict False.");
+console.log(language[2] == "s"); //false
+/*Ex-22 More Conditional Tests: You don’t have to limit the number of tests you create to 10. If you want to try more comparisons, write more tests. Have at least one True and one False result for each of the following:
+• Tests for equality and inequality with strings
+• Tests using the lower case function
+• Numerical tests involving equality and inequality, greater than and less than, greater than or equal to, and less than or equal to
+• Tests using "and" and "or" operators
+• Test whether an item is in an array
+• Test whether an item is not in an array */
+var fruit = 'apple';
+console.log("Is fruit equal to 'apple'? I predict True.");
+console.log(fruit == 'apple'); // true
+var city = 'Karachi';
+console.log("Is city not equal to 'Islamabad'? I predict True.");
+console.log(city != 'Islamabad'); // true
+var country = 'USA';
+console.log("Is country in lowercase equal to 'usa'? I predict True.");
+console.log(country.toLowerCase() == 'usa'); // true
+var number = 10;
+console.log("Is number equal to 10? I predict True.");
+console.log(number == 10); // true
+console.log("Is number greater than 5? I predict True.");
+console.log(number > 5); // true
+console.log("Is number less than or equal to 20? I predict True.");
+console.log(number <= 20); // true
+var age = 25;
+console.log("Is age greater than 18 and less than 30? I predict True.");
+console.log(age > 18 && age < 30); // true
+console.log("Is age greater than 30 or less than 20? I predict False.");
+console.log(age > 30 || age < 20); // false
+var fruits = ['apple', 'banana', 'orange'];
+console.log("Is 'banana' in the fruits array? I predict True.");
+console.log(fruits.includes('banana')); // true
+console.log("Is 'grape' not in the fruits array? I predict False.");
+console.log(fruits.includes('mango')); // false
+/*Ex-23 Alien Colors #1: Imagine an alien was just shot down in a game. Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
+• Write an if statement to test whether the alien’s color is green. If it is, print a message that the player just earned 5 points.
+• Write one version of this program that passes the if test and another that fails. (The version that fails will have no output.) */
+var alien_color = "green";
+if (alien_color === "green")
+    console.log("Congratulations, you just earned 5 points.");
+alien_color = "yellow";
+if (alien_color === "green")
+    console.log("Congratulations, you just earned 5 points.");
+/*Ex-24 Alien Colors #2: Choose a color for an alien as you did in Exercise 25, and write an if-else chain.
+• If the alien’s color is green, print a statement that the player just earned 5 points for shooting the alien.
+• If the alien’s color isn’t green, print a statement that the player just earned 10 points.
+• Write one version of this program that runs the if block and another that runs the else block. */
+alien_color = "green";
+if (alien_color === "green")
+    console.log("Congratulations, you just earned 5 points for shooting the alien.");
+else
+    console.log("Congratulations, you just earned 10 points.");
+alien_color = "yellow";
+if (alien_color === "green")
+    console.log("Congratulations, you just earned 5 points for shooting the alien.");
+else
+    console.log("Congratulations, you just earned 10 points.");
