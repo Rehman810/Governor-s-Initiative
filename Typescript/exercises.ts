@@ -288,6 +288,86 @@ alien_color = "yellow";
 if(alien_color === "green") console.log("Congratulations, you just earned 5 points for shooting the alien.");
 else console.log("Congratulations, you just earned 10 points.");
 
+/*Ex-25 Alien Colors #3: Turn your if-else chain from Exercise 5-4 into an if-else chain.
+• If the alien is green, print a message that the player earned 5 points.
+• If the alien is yellow, print a message that the player earned 10 points.
+• If the alien is red, print a message that the player earned 15 points.
+• Write three versions of this program, making sure each message is printed for the appropriate color alien. */
+
+alien_color = "green";
+if(alien_color === "green") console.log("Congratulations, you just earned 5 points.");
+else if (alien_color === "yellow") console.log("Congratulations, you just earned 10 points.");
+else if (alien_color === "red") console.log("Congratulations, you just earned 15 points.");
+
+alien_color = "yellow";
+if(alien_color === "green") console.log("Congratulations, you just earned 5 points.");
+else if (alien_color === "yellow") console.log("Congratulations, you just earned 10 points.");
+else if (alien_color === "red") console.log("Congratulations, you just earned 15 points.");
+
+alien_color = "red";
+if(alien_color === "green") console.log("Congratulations, you just earned 5 points.");
+else if (alien_color === "yellow") console.log("Congratulations, you just earned 10 points.");
+else if (alien_color === "red") console.log("Congratulations, you just earned 15 points.");
+
+/*Ex-26 Stages of Life: Write an if-else chain that determines a person’s stage of life. Set a value for the variable age, and then:
+• If the person is less than 2 years old, print a message that the person is a baby.
+• If the person is at least 2 years old but less than 4, print a message that the person is a toddler.
+• If the person is at least 4 years old but less than 13, print a message that the person is a kid.
+• If the person is at least 13 years old but less than 20, print a message that the person is a teenager.
+• If the person is at least 20 years old but less than 65, print a message that the person is an adult.
+• If the person is age 65 or older, print a message that the person is an elder. */
+
+let Age: number = 25;
+if(Age < 2) console.log("The person is a baby.");
+else if(Age == 2  || Age < 4) console.log("The person is a toddler.");
+else if(Age == 4  || Age < 13) console.log("The person is a kid.");
+else if(Age == 13  || Age < 20) console.log("The person is a teenager.");
+else if(Age == 20  || Age < 65) console.log("The person is an adult.");
+else if(Age >= 65) console.log("The person is an elder.");
+
+/*Ex-27 Favorite Fruit: Make a array of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your array.
+• Make a array of your three favorite fruits and call it favorite_fruits.
+• Write five if statements. Each should check whether a certain kind of fruit is in your array.
+If the fruit is in your array, the if block should print a statement, such as You really like bananas! */
+
+let favorite_fruits: string[] = ["banana", "apple", "mango", "orange"];
+if(favorite_fruits.includes("banana")) console.log("You really like bananas!")
+if(favorite_fruits.includes("apple")) console.log("You really like apples!")
+if(favorite_fruits.includes("mango")) console.log("You really like mangoes!")
+if(favorite_fruits.includes("orange")) console.log("You really like oranges!")
+
+/*Ex-28 Hello Admin: Make a array of five or more usernames, including the name 'admin'. Imagine you are writing code that will print a greeting to each user after they log in to a website. Loop through the array, and print a greeting to each user:
+• If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
+• Otherwise, print a generic greeting, such as Hello Eric, thank you for logging in again. */
+
+let userNames: string[] = ["Abdul Rehman", "admin", "Huzaifa", "Ali", "Hamza" ];
+userNames.map((a)=>{
+    if(a == "admin") console.log(`Hello admin, would you like to see a status report?`);
+    else  console.log(`Hello ${a}, thank you for logging in again.`);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
