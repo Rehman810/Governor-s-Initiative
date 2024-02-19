@@ -450,6 +450,114 @@ describe_city("New York", "USA");
 describe_city("London", "UK");
 describe_city("Dubai", "UAE");
 
+/*Ex-37 City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this:
+"Lahore, Pakistan"
+Call your function with at least three city-country pairs, and print the value that’s returned. */
 
+let city_country = (city: string, country: string): string => {
+    return `"${city}, ${country}"`;
+}
+
+console.log(city_country("karachi", "Pakistan"))
+console.log(city_country("London", "UK"))
+console.log(city_country("New York", "USA"))
+
+/*Ex-38 Album: Write a function called make_album() that builds a Object describing a music album. The function should take in an artist name and an album title,
+and it should return a Object containing these two pieces of information. Use the function to make three dictionaries representing different albums.
+Print each return value to show that Objects are storing the album information correctly. Add an optional parameter to make_album() that allows you to store the number of tracks on an album.
+If the calling line includes a value for the number of tracks, add that value to the album’s Object. Make at least one new function call that includes the number of tracks on an album.*/
+
+interface Album{
+    artist: string;
+    title: string;
+    track?: number;
+}
+let make_album = (artist: string, title: string, track?: number): Album =>{
+    let album: Album = {
+        artist: artist,
+        title: title,
+    }
+    if(track !== undefined) album.track = track;
+
+    return album;
+}
+
+let album_1 = make_album("artist1", "album1");
+let album_2 = make_album("artist2", "album2");
+let album_3 = make_album("artist3", "album3", 45);
+
+console.log(album_1);
+console.log(album_2);
+console.log(album_3);
+
+/*x-39 Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(),
+which prints the name of each magician in the array. */
+
+let magiciansName: string[] = ["David Copperfield", "Harry Houdini", "Penn Jillette"];
+let show_magicians = (magicians: string[]): void => {
+    magicians.forEach((a) => {
+        console.log(a)
+    })
+}
+
+show_magicians(magiciansName);
+
+/*Ex-40 Great Magicians: Start with a copy of your program from Exercise 39.
+Write a function called make_great() that modifies the array of magicians by adding the phrase the Great to each magician’s name.
+Call show_magicians() to see that the list has actually been modified. */
+
+let make_great = (magicians: string[]): void => {
+    magicians.forEach((name, index) => {
+        magicians[index] = `The great ${name}.`
+    })
+}
+
+make_great(magiciansName);
+show_magicians(magiciansName);
+
+/*Ex-41 Sandwiches: Write a function that accepts a array of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides,
+and it should print a summary of the sandwich that is being ordered. Call the function three times, using a different number of arguments each time. */
+
+function makeSandwich(...ingredients: string[]): void {
+    console.log("Sandwich Summary:");
+    if (ingredients.length === 0) {
+        console.log("You ordered an empty sandwich. Please add some ingredients.");
+    } else {
+        console.log("Your sandwich contains:");
+        ingredients.forEach((ingredient) => {
+            console.log(ingredient);
+        });
+    }
+}
+
+makeSandwich("Ham", "Cheese", "Lettuce");
+makeSandwich("Turkey", "Tomato", "Mayonnaise", "Mustard");
+makeSandwich();
+
+
+/*Ex-42 Cars: Write a function that stores information about a car in a Object. The function should always receive a manufacturer and a model name. It should then accept an arbitrary number of keyword arguments.
+Call the function with the required information and two other name-value pairs, such as a color or an optional feature. Print the Object that’s returned to make sure all the information was stored correctly. */
+
+interface Car{
+    manufacturer: string;
+    modelName: string;
+    color: string;
+    horsePower?: number;
+}
+let car_func = (manufacturer: string, modelName: string, color: string ,horsePower?: number): Car =>{
+    let car: Car = {
+        manufacturer: manufacturer,
+        modelName: modelName,
+        color: color,
+    }
+    if(horsePower !== undefined) car.horsePower = horsePower;
+
+    return car;
+}
+let car1 = car_func("honda", "Rx 50", "black");
+let car2 = car_func("nissan", "daihatsu", "white", 1000);
+
+console.log(car1);
+console.log(car2);
 
 

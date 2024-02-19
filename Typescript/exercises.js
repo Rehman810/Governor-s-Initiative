@@ -408,3 +408,81 @@ describe_city();
 describe_city("New York", "USA");
 describe_city("London", "UK");
 describe_city("Dubai", "UAE");
+/*Ex-37 City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this:
+"Lahore, Pakistan"
+Call your function with at least three city-country pairs, and print the value that’s returned. */
+var city_country = function (city, country) {
+    return "\"".concat(city, ", ").concat(country, "\"");
+};
+console.log(city_country("karachi", "Pakistan"));
+console.log(city_country("London", "UK"));
+console.log(city_country("New York", "USA"));
+var make_album = function (artist, title, track) {
+    var album = {
+        artist: artist,
+        title: title,
+    };
+    if (track !== undefined)
+        album.track = track;
+    return album;
+};
+var album_1 = make_album("artist1", "album1");
+var album_2 = make_album("artist2", "album2");
+var album_3 = make_album("artist3", "album3", 45);
+console.log(album_1);
+console.log(album_2);
+console.log(album_3);
+/*x-39 Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(),
+which prints the name of each magician in the array. */
+var magiciansName = ["David Copperfield", "Harry Houdini", "Penn Jillette"];
+var show_magicians = function (magicians) {
+    magicians.forEach(function (a) {
+        console.log(a);
+    });
+};
+show_magicians(magiciansName);
+/*Ex-40 Great Magicians: Start with a copy of your program from Exercise 39.
+Write a function called make_great() that modifies the array of magicians by adding the phrase the Great to each magician’s name.
+Call show_magicians() to see that the list has actually been modified. */
+var make_great = function (magicians) {
+    magicians.forEach(function (name, index) {
+        magicians[index] = "The great ".concat(name, ".");
+    });
+};
+make_great(magiciansName);
+show_magicians(magiciansName);
+/*Ex-41 Sandwiches: Write a function that accepts a array of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides,
+and it should print a summary of the sandwich that is being ordered. Call the function three times, using a different number of arguments each time. */
+function makeSandwich() {
+    var ingredients = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        ingredients[_i] = arguments[_i];
+    }
+    console.log("Sandwich Summary:");
+    if (ingredients.length === 0) {
+        console.log("You ordered an empty sandwich. Please add some ingredients.");
+    }
+    else {
+        console.log("Your sandwich contains:");
+        ingredients.forEach(function (ingredient) {
+            console.log(ingredient);
+        });
+    }
+}
+makeSandwich("Ham", "Cheese", "Lettuce");
+makeSandwich("Turkey", "Tomato", "Mayonnaise", "Mustard");
+makeSandwich();
+var car_func = function (manufacturer, modelName, color, horsePower) {
+    var car = {
+        manufacturer: manufacturer,
+        modelName: modelName,
+        color: color,
+    };
+    if (horsePower !== undefined)
+        car.horsePower = horsePower;
+    return car;
+};
+var car1 = car_func("honda", "Rx 50", "black");
+var car2 = car_func("nissan", "daihatsu", "white", 1000);
+console.log(car1);
+console.log(car2);
