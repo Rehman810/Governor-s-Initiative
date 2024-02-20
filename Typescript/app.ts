@@ -1,2 +1,2 @@
-const hello = "Hello TypeScript";
+var hello = "Hello TypeScript";
 console.log(hello);
