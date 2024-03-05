@@ -1,4 +1,3 @@
-"use strict";
 // Exercises
 /*Ex-1 Personal Message: Store a person’s name in a variable, and print a message to that person.
 Your message should be simple, such as, “Hello Eric, would you like to learn some Python today?”*/
@@ -470,3 +469,4 @@ let car1 = car_func("honda", "Rx 50", "black");
 let car2 = car_func("nissan", "daihatsu", "white", 1000);
 console.log(car1);
 console.log(car2);
+export {};
