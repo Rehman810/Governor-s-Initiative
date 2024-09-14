@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Button from "../../components/button";
 
 const page = () => {
   return (
@@ -12,6 +13,7 @@ const page = () => {
           Go to Cricket
         </Link>
       </span>
+      <Button color="red" name="John" />
     </div>
   );
 };
