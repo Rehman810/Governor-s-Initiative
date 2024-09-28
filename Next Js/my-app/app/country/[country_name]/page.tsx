@@ -34,6 +34,10 @@ const page = ({ params }: any) => {
 
   let countryData = countryInfo[country];
 
+  if (!countryData) {
+    return <p>No data found</p>;
+  }
+
   return (
     <>
       <ul>
